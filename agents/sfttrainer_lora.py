@@ -19,7 +19,7 @@ def create_sql_trainer(model_id, tokenizer, train_dataset, eval_dataset, output_
     }
 
     training_args = SFTConfig(
-        # fp16=True,
+        # fp16=True, # fp16 is not supported on MPS
         # do_eval=True,
         gradient_accumulation_steps=8,
         gradient_checkpointing=True,
